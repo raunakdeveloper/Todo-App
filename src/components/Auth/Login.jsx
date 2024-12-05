@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { useAuth } from '../../context/AuthContext';
-import { FcGoogle } from 'react-icons/fc';
-import Spinner from '../UI/Spinner';
+import { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
+import { FcGoogle } from "react-icons/fc";
+import Spinner from "../UI/Spinner";
 
 export default function Login() {
   const { signInWithGoogle } = useAuth();
@@ -12,7 +12,7 @@ export default function Login() {
     try {
       await signInWithGoogle();
     } catch (error) {
-      console.error('Error signing in:', error);
+      console.error("Error signing in:", error);
     } finally {
       setLoading(false);
     }
@@ -21,7 +21,9 @@ export default function Login() {
   return (
     <div className="mt-28 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 className="text-2xl font-bold text-center mb-6">Welcome to Todo App</h1>
+        <h1 className="text-2xl font-bold text-center mb-6">
+          Welcome to Todo App
+        </h1>
         {loading ? (
           <Spinner />
         ) : (

@@ -22,7 +22,7 @@ export default function Header() {
             to="/"
             className="ml-3 text-2xl font-bold text-blue-600 flex items-center"
           >
-            Todo App
+            Note App
           </Link>
           {user && (
             <div className="flex items-center space-x-6">
